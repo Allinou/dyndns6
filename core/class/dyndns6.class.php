@@ -235,7 +235,7 @@ class dyndns6 extends eqLogic {
 				}
 				break;
 		case 'duckdns':
-				$url = 'https://lepireau.fr/cpanelwebcall/' . $this->getConfiguration('token');
+				$url = $this->getConfiguration('hostname') . $this->getConfiguration('token');
 				log::add('dyndns6', 'debug', $url);
 				$request_http = new com_http($url);
 				$request_http->setUserAgent('Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.0.12) Gecko/20070508 Firefox/1.5.0.12');
